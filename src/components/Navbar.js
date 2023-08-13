@@ -5,8 +5,8 @@ const Navbar = () => {
       <div className="container">
         <Link to="/">Bank home page</Link>
         <nav>
-          <link to="/login">Login</link>
-          <link to="/signup">Sign Up</link>
+          <Link to="/login">login</Link>
+          <Link to="/signup">signup</Link>
         </nav>
       </div>
     </header>

@@ -2,8 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Login from "./pages/Auth/login";
+import Login from "./pages/Auth/Login/login";
 import Signup from "./pages/Auth/Signup";
+import { generateAxiosInstance } from "./utils/AxiosInstance";
+generateAxiosInstance();
 function App() {
   return (
     <div className="App">

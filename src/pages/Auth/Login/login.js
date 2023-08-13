@@ -9,33 +9,29 @@ function Login() {
   };
 
   return (
-    <div className="login-container" onSubmit={handleSubmit}>
+    <div className="login-container">
       <h1>login</h1>
-      <form action="POST">
+      <form onSubmit={handleSubmit}>
         <label>Email :</label>
         <input
           type="email"
-          onChange={(e) => {
-            setEmail(e.target.value);
+          onChange={(event) => {
+            setEmail(event.target.value);
           }}
-          placeholder="Email"
-          name=""
-          id=""
+          placeholder="E-mail"
           value={email}
         />
         <label> Password :</label>
         <input
           type="password"
-          onChange={(e) => {
-            setPassword(e.target.value);
+          onChange={(event) => {
+            setPassword(event.target.value);
           }}
           placeholder="Password"
-          name=""
-          id=""
           value={password}
         />
+        <button type="submit">Log in</button>
       </form>
-      <button>Log in</button>
     </div>
   );
 }
