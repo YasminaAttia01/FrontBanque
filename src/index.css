@@ -1,0 +1,63 @@
+/* Importer une police Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Définir les variables de couleur et de typographie */
+:root {
+  --primary-color: #06213d;
+  --secondary-color: #6c757d;
+  --font-family: 'Open Sans', sans-serif;
+}
+
+/* Appliquer les styles de base au corps du document */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+
+/* Styles de l'en-tête */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+header.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+header a:hover {
+  color: var(--secondary-color);
+}
+
+/* Styles pour la classe .pages */
+.pages {
+  padding: 2rem;
+}
+/*navbar*/ 
+ nav{
+  display:flex;
+  align-items:center;
+}
+nav a {
+  margin-left: 10px;
+}
+/*auth forms */
+div.Signup-container, div.login-container{
+  max-width:400px;
+  margin:40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius:4px;
+}
+
