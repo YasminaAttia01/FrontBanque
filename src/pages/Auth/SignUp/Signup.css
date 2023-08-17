@@ -1,5 +1,5 @@
-/* Login Component Styles */
-.login-container {
+/* Signup Component Styles */
+.Signup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,23 +7,23 @@
     height: 100vh;
   }
   
-  .login-container h1 {
+  .Signup-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
   
-  .login-container form {
+  .Signup-container form {
     display: flex;
     flex-direction: column;
     width: 300px;
   }
   
-  .login-container label {
+  .Signup-container label {
     font-size: 14px;
     margin-bottom: 5px;
   }
   
-  .login-container input {
+  .Signup-container input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -31,7 +31,7 @@
     font-size: 14px;
   }
   
-  .login-container button {
+  .Signup-container button {
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -42,21 +42,24 @@
     transition: background-color 0.3s ease-in-out;
   }
   
-  .login-container button:hover {
+  .Signup-container button:hover {
     background-color: #0056b3;
   }
-  .forgot-password {
+  
+  
+  /* Additional styles for the "Forgot Password" link */
+  .Signup-container .forgot-password {
     margin-top: 10px;
     text-align: center;
   }
   
-  .forgot-password a {
+  .Signup-container .forgot-password a {
     color: #007bff;
     text-decoration: none;
     font-size: 14px;
   }
   
-  .forgot-password a:hover {
+  .Signup-container .forgot-password a:hover {
     text-decoration: underline;
   }
   

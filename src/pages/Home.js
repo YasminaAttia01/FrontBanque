@@ -1,25 +1,25 @@
 import React from "react";
+import "./Home.css";
 
-const HomePage = () => {
+function HomePage() {
   return (
-    <div className="pages">
-      <header>
-        <div className="container">
-          <h1>Mon Site Web</h1>
-          <nav>
-            <a href="#">Accueil</a>
-            <a href="#">À Propos</a>
-            <a href="#">Contact</a>
-          </nav>
-        </div>
+    <div className="home-page">
+      <header className="header">
+        <h1>Welcome to Our Bank</h1>
+        <p>Your Trusted Partner in Banking Solutions</p>
       </header>
-
-      <main>
-        <h2>Bienvenue sur notre site</h2>
-        <p>C'est la page d'accueil de notre site web.</p>
-      </main>
+      <section className="features">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Secure Online Banking</li>
+          <li>Quick and Easy Fund Transfers</li>
+          <li>24/7 Customer Support</li>
+          {/* Add more features here */}
+        </ul>
+      </section>
+      {/* Add more sections and content */}
     </div>
   );
-};
+}
 
 export default HomePage;

@@ -45,19 +45,62 @@ header a:hover {
   padding: 2rem;
 }
 /*navbar*/ 
- nav{
-  display:flex;
-  align-items:center;
-}
-nav a {
-  margin-left: 10px;
-}
-/*auth forms */
-div.Signup-container, div.login-container{
-  max-width:400px;
-  margin:40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius:4px;
+ /*Navbar.css */
+header {
+  background-color: #0077b5;
+  color: #fff;
+  padding: 1rem 0;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #063b51;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 1rem;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout-button:hover {
+  color: #00a8e8;
+}

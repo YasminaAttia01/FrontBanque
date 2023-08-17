@@ -2,8 +2,8 @@ import axios from "axios";
 
 var axiosInstance;
 
-let generateAxiosInstance = () => {
-  axiosInstance = axios.create({
+let generateAxiosInstance = async () => {
+  axiosInstance = await axios.create({
     baseURL: `http://localhost:9000/api`,
     headers: {
       "Content-Type": "application/json",
