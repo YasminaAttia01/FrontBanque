@@ -45,62 +45,48 @@ header a:hover {
   padding: 2rem;
 }
 /*navbar*/ 
- /*Navbar.css */
+ /* Navbar.css */
+
 header {
-  background-color: #0077b5;
-  color: #fff;
-  padding: 1rem 0;
+  background-color: #222B2D; /* Use primary color from your theme */
+  color: #FFFEF9; /* Use white color from your theme */
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-}
-
-.nav-links {
+nav {
   display: flex;
   align-items: center;
+
+  a {
+    color: #29AABB; /* Use secondary color from your theme */
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #148C9C; /* Use hover color from your theme */
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: #29AABB; /* Use secondary color from your theme */
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #148C9C; /* Use hover color from your theme */
+    }
+  }
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #063b51;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-}
-
-.user-info span {
-  margin-right: 1rem;
-}
-
-.logout-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.logout-button:hover {
-  color: #00a8e8;
-}

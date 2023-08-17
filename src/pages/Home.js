@@ -1,25 +1,40 @@
 import React from "react";
-import "./Home.css";
+import { ColorScheme } from "../utils/theme";
 
-function HomePage() {
+const Home = () => {
   return (
-    <div className="home-page">
-      <header className="header">
-        <h1>Welcome to Our Bank</h1>
-        <p>Your Trusted Partner in Banking Solutions</p>
-      </header>
-      <section className="features">
-        <h2>Our Services</h2>
-        <ul>
-          <li>Secure Online Banking</li>
-          <li>Quick and Easy Fund Transfers</li>
-          <li>24/7 Customer Support</li>
-          {/* Add more features here */}
-        </ul>
-      </section>
-      {/* Add more sections and content */}
+    <div
+      style={{
+        height: "100vh",
+        backgroundColor: ColorScheme.PRIMARY,
+        marginTop: "-48px",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <div
+          style={{
+            color: ColorScheme.WHITE,
+            textTransform: "uppercase",
+            letterSpacing: 10,
+            fontSize: 64,
+            fontWeight: "bold",
+          }}
+        >
+          MY BANK
+        </div>
+        <div style={{ color: ColorScheme.WHITE, letterSpacing: 8 }}>
+          Banking made easy.
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default HomePage;
+export default Home;

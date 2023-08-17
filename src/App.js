@@ -4,6 +4,7 @@ import "./pages/Auth/Login/Login.css";
 import "./pages/Auth/SignUp/Signup.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
+import CustomThemeProvider from "./utils/CustomThemeProvider";
 //AGENT DASH PAGES ------------------------------------------------------------------------------------------
 import AgentOverviewPage from "./pages/dashboard/agentDash/pages/agentOverview";
 import ClientOverviewPage from "./pages/dashboard/clientDash/pages/clientOverview";
@@ -38,36 +39,41 @@ function App() {
         </ThemeProvider>
         <Navbar />
         <div className="pages">
-          <Routes>
-            <Route path="BillPay" element={<BillPaymentPage />}></Route>
-            <Route path="contact" element={<ContactSupportPage />}></Route>
-            <Route path="transf" element={<TransferFunds />}></Route>
-            +++++++++++++++++++++++++++++++++
-            <Route path="transacHis" element={<TransactionHistory />}></Route>
-            <Route path="notif" element={<NotificationSettings />}></Route>
-            <Route path="pwdchange" element={<SecuritySettings />}></Route>
-            <Route path="profilechange" element={<ProfileUpdate />}></Route>
-            ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            <Route path="/performance" element={<PerformanceChart />}></Route>
-            <Route
-              path="/clientmanagement"
-              element={<ClientManagementPage />}
-            ></Route>
-            <Route
-              path="/commClient"
-              element={<ClientCommunicationPage />}
-            ></Route>
-            <Route path="/doc" element={<DocumentPage />}></Route>
-            <Route
-              path="/appointmentSche"
-              element={<AppointmentSchedulingPage />}
-            ></Route>
-            <Route path="/clientover" element={<ClientOverviewPage />}></Route>
-            <Route path="/agentover" element={<AgentOverviewPage />}></Route>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/signup" element={<Signup />}></Route>
-          </Routes>
+          <CustomThemeProvider>
+            <Routes>
+              <Route path="BillPay" element={<BillPaymentPage />}></Route>
+              <Route path="contact" element={<ContactSupportPage />}></Route>
+              <Route path="transf" element={<TransferFunds />}></Route>
+              +++++++++++++++++++++++++++++++++
+              <Route path="transacHis" element={<TransactionHistory />}></Route>
+              <Route path="notif" element={<NotificationSettings />}></Route>
+              <Route path="pwdchange" element={<SecuritySettings />}></Route>
+              <Route path="profilechange" element={<ProfileUpdate />}></Route>
+              ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+              <Route path="/performance" element={<PerformanceChart />}></Route>
+              <Route
+                path="/clientmanagement"
+                element={<ClientManagementPage />}
+              ></Route>
+              <Route
+                path="/commClient"
+                element={<ClientCommunicationPage />}
+              ></Route>
+              <Route path="/doc" element={<DocumentPage />}></Route>
+              <Route
+                path="/appointmentSche"
+                element={<AppointmentSchedulingPage />}
+              ></Route>
+              <Route
+                path="/clientover"
+                element={<ClientOverviewPage />}
+              ></Route>
+              <Route path="/agentover" element={<AgentOverviewPage />}></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/login" element={<Login />}></Route>
+              <Route path="/signup" element={<Signup />}></Route>
+            </Routes>
+          </CustomThemeProvider>
         </div>
       </BrowserRouter>
     </div>
