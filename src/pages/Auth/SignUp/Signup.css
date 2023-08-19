@@ -24,26 +24,37 @@
   }
   
   .Signup-container input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0px;
+    width: 100%;
   }
   
   .Signup-container button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 12px 45px;
+    background-color: orangered;
+    color: #FFFFFF;
+    font-size: 12px;
+    border: 1px solid #FF4B2B;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: transform 80ms ease-in;
   }
   
-  .Signup-container button:hover {
-    background-color: #0056b3;
+  .Signup-container button:active{
+    transform: scale(0.95);
+  }
+
+  .Signup-container button:focus{
+    outline: none;
+  }
+
+  .Signup-container button.forgot-password{
+    background-color: transparent;
+    border-color: #FFFFFF;
   }
   
   
