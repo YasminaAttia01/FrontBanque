@@ -24,10 +24,11 @@ header {
   padding: 1rem;
 }
 
-header.container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 40px;
 }
 
 header a {
@@ -42,7 +43,7 @@ header a:hover {
 
 /* Styles pour la classe .pages */
 .pages {
-  padding: 2rem;
+  /* padding: 0 2rem; */
 }
 /*navbar*/ 
  /* Navbar.css */

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { useSignup } from "../../../hooks/useSignup";
+import { useNavigate } from "react-router-dom"
 
 function Signup() {
-  const [Role, setRole] = useState("");
+  const nav = useNavigate()
+  const [Role, setRole] = useState("client");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Nom, setNom] = useState("");
@@ -15,7 +17,6 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await signup(
       Role,
       Nom,
@@ -24,21 +25,21 @@ function Signup() {
       Adresse,
       PhoneNumber,
       email,
-      password
+      password,
+      nav
     );
   };
 
   return (
+  <>
     <div className="Signup-container">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="nom">your Role (agent or client):</label>
-        <input
-          type="text"
-          onChange={(event) => setRole(event.target.value)}
-          placeholder="Role"
-          name="Role"
-        />
+        <select name="Role" onChange={(event) => setRole(event.target.value)}>
+          <option value="client" >Client</option>
+          <option value="agent" >Agent</option>
+        </select>
         <label htmlFor="nom">Name:</label>
         <input
           type="text"
@@ -95,6 +96,7 @@ function Signup() {
         {error && <div className="error">{error}</div>}
       </form>
     </div>
+  </>
   );
 }
 

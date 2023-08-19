@@ -15,33 +15,30 @@ export const useSignup = () => {
     Adresse,
     PhoneNumber,
     email,
-    password
+    password,
+    nav
   ) => {
-    setIsLoading(true);
-    setError(null);
-
-    const response = await axiosInstance.post(
-      "/user/signup",
-      // TODO must add all input data
-      { Role, Nom, Prenom, DateNaiss, Adresse, PhoneNumber, email, password },
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
-    const json = await response.json();
-
-    if (!response.ok) {
+    try {
+      setIsLoading(true);
+      setError(null);
+      const { data } = await axiosInstance.post(
+        "/user/signup",
+        { Role, Nom, Prenom, DateNaiss, Adresse, PhoneNumber, email, password },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      //save the user to local storage
+      localStorage.setItem("user", JSON.stringify(data));
+      
+      //update the auth context
+      // TODO : fix user data in context state
+      // dispatch({ type: "LOGIN", payload: data });
       setIsLoading(false);
-      setError(json.error);
-
-      if (response.ok) {
-        //save the user to local storage
-        localStorage.setItem("user", JSON.stringify(json));
-
-        //update the auth context
-        dispatch({ type: "LOGIN", payload: json });
-        setIsLoading(false);
-      }
+      nav("/login")
+    } catch (error) {
+      setIsLoading(false);
+      setError(error?.response?.data?.error);
     }
   };
 

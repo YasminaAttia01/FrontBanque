@@ -5,9 +5,8 @@ const Home = () => {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "calc(100vh - 72px)",
         backgroundColor: ColorScheme.PRIMARY,
-        marginTop: "-48px",
       }}
     >
       <div

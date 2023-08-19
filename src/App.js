@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import "./pages/Auth/Login/Login.css";
 import "./pages/Auth/SignUp/Signup.css";
+import 'react-toastify/dist/ReactToastify.css';
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import CustomThemeProvider from "./utils/CustomThemeProvider";
