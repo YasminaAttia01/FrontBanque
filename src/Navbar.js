@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../src/hooks/useAuthContext";
 
@@ -7,22 +8,31 @@ const Navbar = () => {
   const handleClick = () => {
     //logout();
   };
+
   return (
     <header>
       <div className="container">
-        <Link to="/">Bank home page</Link>
+        <Link to="/" className="logo">
+          Bank home page
+        </Link>
         <nav>
           {user && (
             <div>
-              <span>{user.email}</span>
-              <button onClick={handleClick}>Log out</button>
+              <span className="user-email">{user.email}</span>
+              <button className="logout-button" onClick={handleClick}>
+                Log out
+              </button>
             </div>
           )}
 
           {!user && (
-            <div>
-              <Link to="/login">login</Link>
-              <Link to="/signup">signup</Link>
+            <div className="auth-buttons">
+              <Link to="/login" className="auth-button">
+                Login
+              </Link>
+              <Link to="/signup" className="auth-button">
+                Sign Up
+              </Link>
             </div>
           )}
         </nav>
