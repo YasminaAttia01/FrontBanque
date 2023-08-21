@@ -29,6 +29,7 @@ export const useSignup = () => {
         }
       );
       //save the user to local storage
+      console.log(data);
       localStorage.setItem("user", JSON.stringify(data));
       
       //update the auth context

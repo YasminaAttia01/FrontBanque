@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { useSignup } from "../../../hooks/useSignup";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [Role, setRole] = useState("client");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,72 +31,72 @@ function Signup() {
   };
 
   return (
-  <>
-    <div className="Signup-container">
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="nom">your Role (agent or client):</label>
-        <select name="Role" onChange={(event) => setRole(event.target.value)}>
-          <option value="client" >Client</option>
-          <option value="agent" >Agent</option>
-        </select>
-        <label htmlFor="nom">Name:</label>
-        <input
-          type="text"
-          onChange={(event) => setNom(event.target.value)}
-          placeholder="Nom"
-          name="nom"
-        />
-        <label htmlFor="prenom">First name:</label>
-        <input
-          type="text"
-          onChange={(event) => setPrenom(event.target.value)}
-          placeholder="Prénom"
-          name="prenom"
-        />
-        <label htmlFor="dateNaiss">Date of Birth:</label>
-        <input
-          type="date"
-          onChange={(event) => setDateNaiss(event.target.value)}
-          placeholder="Date de Naissance"
-          name="dateNaiss"
-        />
-        <label htmlFor="adresse">Adresse:</label>
-        <input
-          type="text"
-          onChange={(event) => setAdresse(event.target.value)}
-          placeholder="Adresse"
-          name="adresse"
-        />
-        <label htmlFor="phoneNumber">Phone number :</label>
-        <input
-          type="text"
-          onChange={(event) => setPhoneNumber(event.target.value)}
-          placeholder="Numéro de Téléphone"
-          name="phoneNumber"
-        />
-        <label htmlFor="email">E-mail:</label>
-        <input
-          type="email"
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder="Email"
-          name="email"
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          onChange={(event) => setPassword(event.target.value)}
-          placeholder="Password"
-          name="password"
-        />
-        <button type="submit" disable={isLoading}>
-          {" "}
-          Sign Up
-        </button>
-        {error && <div className="error">{error}</div>}
-      </form>
-    </div>
-  </>
+    <>
+      <div className="Signup-container">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit} className="form-container">
+          <label htmlFor="nom">your Role:</label>
+          <select name="Role" onChange={(event) => setRole(event.target.value)}>
+            <option value="client">Client</option>
+            <option value="agent">Agent</option>
+          </select>
+          <label htmlFor="nom">Name:</label>
+          <input
+            type="text"
+            onChange={(event) => setNom(event.target.value)}
+            placeholder="Nom"
+            name="nom"
+          />
+          <label htmlFor="prenom">First name:</label>
+          <input
+            type="text"
+            onChange={(event) => setPrenom(event.target.value)}
+            placeholder="Prénom"
+            name="prenom"
+          />
+          <label htmlFor="dateNaiss">Date of Birth:</label>
+          <input
+            type="date"
+            onChange={(event) => setDateNaiss(event.target.value)}
+            placeholder="Date de Naissance"
+            name="dateNaiss"
+          />
+          <label htmlFor="adresse">Adresse:</label>
+          <input
+            type="text"
+            onChange={(event) => setAdresse(event.target.value)}
+            placeholder="Adresse"
+            name="adresse"
+          />
+          <label htmlFor="phoneNumber">Phone number :</label>
+          <input
+            type="text"
+            onChange={(event) => setPhoneNumber(event.target.value)}
+            placeholder="Numéro de Téléphone"
+            name="phoneNumber"
+          />
+          <label htmlFor="email">E-mail:</label>
+          <input
+            type="email"
+            onChange={(event) => setEmail(event.target.value)}
+            placeholder="Email"
+            name="email"
+          />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Password"
+            name="password"
+          />
+          <button type="submit" disable={isLoading}>
+            {" "}
+            Sign Up
+          </button>
+          {error && <div className="error">{error}</div>}
+        </form>
+      </div>
+    </>
   );
 }
 

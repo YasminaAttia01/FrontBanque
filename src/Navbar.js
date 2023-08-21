@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useAuthContext } from "../src/hooks/useAuthContext";
+import { useLogout } from "./hooks/useLogout";
+import { AuthContext } from "./context/AuthContext"; // Update the path accordingly
 
 const Navbar = () => {
-  const { user } = useAuthContext();
+  const { user, dispatch } = useContext(AuthContext);
+  const { logout } = useLogout();
 
   const handleClick = () => {
-    //logout();
+    // Dispatch the LOGOUT action here
+    dispatch({ type: "LOGOUT" });
+    logout();
   };
 
   return (
@@ -17,8 +21,11 @@ const Navbar = () => {
         </Link>
         <nav>
           {user && (
-            <div>
-              <span className="user-email">{user.email}</span>
+            <div className="user-dashboard">
+              <span className="user-email">Welcome, {user.email}</span>
+              <Link to="/agentover" className="dashboard-link">
+                Dashboard
+              </Link>
               <button className="logout-button" onClick={handleClick}>
                 Log out
               </button>

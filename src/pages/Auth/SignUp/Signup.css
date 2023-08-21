@@ -1,36 +1,72 @@
-/* Signup Component Styles */
+/* Signup.css */
 .Signup-container {
+    padding: 50px 0;
+    background: radial-gradient(#fff, #efebeb);
+  }
+  
+  .form-container {
+    background: #fff;
+    width: 700px;
+    height: 750px;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
   }
   
+  .form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #881515;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+  }
+  
+  .form-btn {
+    display: inline-block;
+  }
+  
+  .form-container form {
+    max-width: 400px;
+    padding: 0 20px;
+    position: relative;
+    transition: 1s;
+    width: 100%;
+  }
   .Signup-container h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
+
   }
   
-  .Signup-container form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+  form input {
+  width: 70%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
   }
   
-  .Signup-container label {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
-  .Signup-container input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0px;
+  form .btn {
     width: 100%;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
   }
   
+  form .btn:focus {
+    outline: none;
+  }
+
   .Signup-container button {
     padding: 12px 45px;
     background-color: orangered;
@@ -56,16 +92,13 @@
     background-color: transparent;
     border-color: #FFFFFF;
   }
-  
-  
-  /* Additional styles for the "Forgot Password" link */
   .Signup-container .forgot-password {
     margin-top: 10px;
     text-align: center;
   }
   
   .Signup-container .forgot-password a {
-    color: #007bff;
+    color: #bec2c6;
     text-decoration: none;
     font-size: 14px;
   }

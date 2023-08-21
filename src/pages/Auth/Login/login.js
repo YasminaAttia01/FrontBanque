@@ -3,7 +3,7 @@ import { useLogin } from "../../../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isLoading } = useLogin();
@@ -11,14 +11,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await login(email, password,  nav);
-    
+    await login(email, password, nav);
   };
 
   return (
     <div className="login-container">
       <h1>login</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form-container">
         <label>Email :</label>
         <input
           type="email"

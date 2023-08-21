@@ -42,9 +42,6 @@ header a:hover {
 }
 
 /* Styles pour la classe .pages */
-.pages {
-  /* padding: 0 2rem; */
-}
 /*navbar*/ 
  /* Navbar.css */
 
@@ -72,6 +69,7 @@ nav {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    float: left;
   }
 
   .user-email {
