@@ -1,0 +1,35 @@
+body{
+    margin:0;
+    padding:0;
+    background-size: cover;
+    background-position: center center;
+    height : 90vh;
+    font-family: poppins;
+}
+.wrapper{
+    width: 1170px;
+    margin: 5% auto;
+
+}
+.wrapper h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    margin: 0;
+
+}
+.single-service{
+    position:relative;
+    width: 31%;
+    height: 320px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0 15px;
+    transition: .5s;
+    overflow: hidden;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}

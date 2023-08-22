@@ -19,14 +19,14 @@ import PersonIcon from "@mui/icons-material/Person";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Arial, sans-serif", // Replace with your chosen font
+    fontFamily: "Arial, sans-serif", 
   },
   palette: {
     primary: {
-      main: "#1976d2", // Replace with your primary color
+      main: "#1976d2", 
     },
     secondary: {
-      main: "#f50057", // Replace with your secondary color
+      main: "#f50057", 
     },
   },
 });

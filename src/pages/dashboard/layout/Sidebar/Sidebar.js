@@ -4,11 +4,13 @@ import { navigationLinks } from "../../data/data";
 import "../Sidebar/Sidebar.css";
 import { useContext } from "react";
 import { SidebarContext } from "../../agentDash/context/SidebarContext";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [activeLinkIdx] = useState(1);
   const [sidebarClass, setSidebarClass] = useState("");
   const { isSidebarOpen } = useContext(SidebarContext);
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -32,7 +34,7 @@ const Sidebar = () => {
           {navigationLinks.map((navigationLink) => (
             <li className="nav-item" key={navigationLink.id}>
               <a
-                href="#"
+                href={navigationLink.path}
                 className={`nav-link ${
                   navigationLink.id === activeLinkIdx ? "active" : null
                 }`}
