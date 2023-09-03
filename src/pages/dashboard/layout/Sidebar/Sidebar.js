@@ -5,12 +5,15 @@ import "../Sidebar/Sidebar.css";
 import { useContext } from "react";
 import { SidebarContext } from "../../agentDash/context/SidebarContext";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../../context/AuthContext"; // Update the path accordingly
 
 const Sidebar = () => {
   const [activeLinkIdx] = useState(1);
   const [sidebarClass, setSidebarClass] = useState("");
   const { isSidebarOpen } = useContext(SidebarContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { user, dispatch } = useContext(AuthContext);
+  //ija nkhamou mabathna fin andna variable feha esm l client w données mte3ou lkol? fel user wala token yaati juste role nzidou esmou fel backend
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -26,7 +29,7 @@ const Sidebar = () => {
         <div className="info-img img-fit-cover">
           <img src={personsImgs.person_two} alt="profile image" />
         </div>
-        <span className="info-name">dear user</span>
+        <span className="info-name">dear {user.name}</span>
       </div>
 
       <nav className="navigation">

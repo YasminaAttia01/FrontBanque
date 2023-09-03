@@ -54,7 +54,6 @@ function App() {
               </Route>
               ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
               <Route path="agent" element={<AgentOverviewPage />}>
-                
                 <Route path="service" element={<ServicePage />}></Route>
                 <Route
                   path="performance"
@@ -75,9 +74,10 @@ function App() {
                 ></Route>
               </Route>
               --------------------------------------------------------------------------------------------
-              <Route path="client" element={<ClientOverviewPage />}>
+              <Route path="client">
+                <Route path="" element={<ClientOverviewPage />} />
                 <Route path="BillPay" element={<BillPaymentPage />}></Route>
-                <Route path="contact" element={<ContactSupportPage />}></Route>
+                <Route path="" element={<ContactSupportPage />}></Route>
                 <Route path="transf" element={<TransferFunds />}></Route>
               </Route>
               -----------------------------------------------------------------------------------------------------------

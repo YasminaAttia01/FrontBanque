@@ -1,16 +1,21 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useLogout } from "./hooks/useLogout";
 import { AuthContext } from "./context/AuthContext"; // Update the path accordingly
 
 const Navbar = () => {
   const { user, dispatch } = useContext(AuthContext);
   const { logout } = useLogout();
+  const navigate = useNavigate()
+  useEffect(() => {
+    console.log("navbar");
+    console.log(user);
+  }, [user]);
 
   const handleClick = () => {
     // Dispatch the LOGOUT action here
-    dispatch({ type: "LOGOUT" });
-    logout();
+    logout(navigate);
+    // dispatch({ type: "LOGOUT" });
   };
 
   return (

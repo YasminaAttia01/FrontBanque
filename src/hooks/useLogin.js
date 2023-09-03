@@ -16,12 +16,15 @@ export const useLogin = () => {
         email,
         password,
       });
+      console.log(data);
       console.log("response login =========>", data);
       //save the user to local storage
       localStorage.setItem("user", JSON.stringify(data));
       //update the auth context
-      // dispatch({ type: "LOGIN", payload: data });
+      dispatch({ type: "LOGIN", payload: data });
       setIsLoading(false);
+      console.log(data.role);
+      //jit besh n9olek nzidou hedhi deja amletha bravo :D
       if (data.role === "agent") {
         nav("/agent");
       } else if (data.role === "client") {
